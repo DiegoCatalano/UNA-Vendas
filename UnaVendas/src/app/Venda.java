@@ -15,7 +15,7 @@ import java.util.List;
 public class Venda {
     
     private Cliente cliente;
-    private ArrayList<Produto> produtos;
+    private List<ItemVenda> itemVendas;
     private double valorTotal;
 
     public Cliente getCliente() {
@@ -26,12 +26,12 @@ public class Venda {
         this.cliente = cliente;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
+    public List<ItemVenda> getItemVendas() {
+        return itemVendas;
     }
 
-    public void setProdutos(ArrayList<Produto> produtos) {
-        this.produtos = produtos;
+    public void setItemVendas(List<ItemVenda> itemVendas) {
+        this.itemVendas = itemVendas;
     }
 
     public double getValorTotal() {
@@ -42,11 +42,9 @@ public class Venda {
         this.valorTotal = valorTotal;
     }
 
-    public Venda() {}
-
-    public Venda(Cliente cliente, ArrayList<Produto> produtos, double valorTotal) {
+    public Venda(Cliente cliente, List<ItemVenda> itemVendas, double valorTotal) {
         this.cliente = cliente;
-        this.produtos = produtos;
+        this.itemVendas = itemVendas;
         this.valorTotal = valorTotal;
     }
     

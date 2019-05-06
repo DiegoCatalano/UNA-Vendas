@@ -19,7 +19,31 @@ public class Main {
      */
     public static void main(String[] args) {
         
-
+        Cliente cli = new Cliente("nome", "123", 10);
+        
+        List<Produto> produtos = new ArrayList<>();
+        produtos.add(new Produto("caneta", 1, 10));
+        produtos.add(new Produto("lapis", 0.8, 10));
+        produtos.add(new Produto("caderno", 10, 10));
+        
+        List<ItemVenda> items = new ArrayList<>();
+        items.add(new ItemVenda(produtos.get(1), 3, produtos.get(1).getValor()));
+        items.add(new ItemVenda(produtos.get(2), 1, produtos.get(2).getValor()));
+        
+        double sum = 0;
+        for (ItemVenda item : items) {
+            sum += item.getQuantidade() * item.getValorVendido();
+        }
+        
+        //Venda realizada
+        Venda venda = new Venda(cli, items, sum);
+        
+        produtos.get(1).setValor(100);
+        List<ItemVenda> it = venda.getItemVendas();
+        Produto prod = it.get(0).getProduto();
+        System.out.println(prod.getDescricao());
+        System.out.println(prod.getValor());
+        System.out.println("Valor vendido: " + it.get(0).getValorVendido());
         
     }
     
