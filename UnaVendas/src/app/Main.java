@@ -27,7 +27,8 @@ public class Main {
         produtos.add(new Produto("caderno", 10, 10));
         
         List<ItemVenda> items = new ArrayList<>();
-        items.add(new ItemVenda(produtos.get(1), 3, produtos.get(1).getValor()));
+        Produto p = produtos.get(1);
+        items.add(new ItemVenda(p, 3, p.getValor()));
         items.add(new ItemVenda(produtos.get(2), 1, produtos.get(2).getValor()));
         
         double sum = 0;
