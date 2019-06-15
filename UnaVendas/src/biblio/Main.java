@@ -6,6 +6,7 @@
 package biblio;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -23,23 +24,16 @@ public class Main {
     
     public static void main(String[] args) {
         
-        Cliente cli = new Cliente("01", "fulano", "123", new Date());
-        Funcionario fun = new Funcionario(new Date(), 10, "fun", "123", new Date());
+        Cliente cli1 = new Cliente("01", "fulano", "123", new Date());
+        Cliente cli2 = new Cliente("10", "beltrano", "243", new Date());
+        Cliente cli3 = new Cliente("20", "deltrano", "547", new Date());
         
-        Livro l1 = new Livro(0, "titulo", "autor", "ed");
-        
-        ItemLivro l = new ItemLivro(l1);
-        
-        List<ItemLivro> livros = new ArrayList<>();
-        livros.add(l);
-        
-        Locacao loc = new Locacao(fun,cli, livros);
-        
-        Pessoa p1 = new Cliente(null,null,null,null);
-        Pessoa p2 = new Funcionario(null,0,null,null,null);
+        List<Cliente> lst = new ArrayList<>();
+        lst.add(cli1);
+        lst.add(cli3);
         
         
-        
+        int stop = 0;
     }
     
 }
